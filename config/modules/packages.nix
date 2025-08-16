@@ -1,0 +1,52 @@
+{ pkgs, ...}: {
+
+environment.systemPackages = with pkgs; [
+    libinput
+    ntfs3g
+    hyprland
+    xdg-desktop-portal-hyprland
+    waybar
+    rofi
+    git
+    ghostty
+    fish
+    neovim
+    neofetch
+    fastfetch
+    kitty
+    brave	
+    wget
+    mlocate
+    hyprpaper
+    rustup
+    gcc
+    rsync 
+    virt-manager 
+    virt-viewer 
+    virtualbox 
+    colloid-gtk-theme 
+    papirus-icon-theme 
+    starship 
+    pipes-rs 
+    tmux 
+    eza
+    wl-clipboard
+    nerd-fonts.jetbrains-mono
+    hyprshot
+    pamixer
+    pavucontrol
+    pipewire
+    font-awesome
+    wlogout
+    blueman
+    dunst
+    discord
+    obsidian
+    spotify
+    brightnessctl
+    hyprlock
+    docker 
+    openvpn
+    zed
+  ];
+}
