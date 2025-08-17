@@ -35,23 +35,30 @@
     algorithm = "zstd";
   };
 
-  services.blueman.enable = true;
+  services = {
+    blueman.enable = true;
   
-  services.libinput = {
-    enable = true;
-    touchpad = {
-    naturalScrolling = true;
-    tapping = true;
+    libinput = {
+      enable = true;
+      touchpad = {
+      naturalScrolling = true;
+      tapping = true;
+      };
     };
-  };
 
-  services.pulseaudio.enable = false;
+   # xserver.inputDriver = "libinput";
 
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
+    xserver.displayManager.defaultSession = "hyprland";
+
+    xserver.enable = true;
   };
 
   hardware.bluetooth.enable = true;
@@ -65,11 +72,6 @@
     AllowHybridSleep=yes
     AllowSuspendThenHibernate=no
   '';
-
-  services.xserver.displayManager.defaultSession = "hyprland";
-
-  services.xserver.enable = true;
-  # services.xserver.inputDriver = "libinput";
 
   time.timeZone = "Asia/Kolkata";
   time.hardwareClockInLocalTime = true;
