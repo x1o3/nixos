@@ -7,25 +7,25 @@
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
-  powerManagement.cpuFreqGovernor = "performance";
-  boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+
+  boot.initrd.availableKernelModules = [ "vmd" "xhci_pci" "thunderbolt" "nvme" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/05562dae-0f8e-455f-8286-6476bc4d9ade";
+    { device = "/dev/disk/by-uuid/0be3d943-0350-4dc9-8d68-b551fc94f95c";
       fsType = "f2fs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3684-ABC8";
+    { device = "/dev/disk/by-uuid/4FE3-2DAF";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/13716c01-f274-4700-96c1-1fe795c18be6"; }
+    [ { device = "/dev/disk/by-uuid/532b3dbf-5fa2-4cc0-a2ad-51c22ee4d194"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -35,7 +35,7 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp109s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
-  
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

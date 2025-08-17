@@ -31,12 +31,16 @@ environment.systemPackages = with pkgs; [
     tmux 
     eza
     wl-clipboard
-    nerd-fonts.jetbrains-mono
     hyprshot
     pamixer
     pavucontrol
     pipewire
     font-awesome
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    noto-fonts-cjk-sans
+    noto-fonts-emoji-blob-bin
+    noto-fonts
     wlogout
     blueman
     dunst
@@ -52,6 +56,7 @@ environment.systemPackages = with pkgs; [
     python313Packages.pip
     unzip
     zip
+    p7zip
     zig
   ];
 }

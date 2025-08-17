@@ -5,7 +5,6 @@
    fsType = "ntfs3";
    options = [ "defaults" ];
   };
-
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
@@ -14,8 +13,9 @@
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
       };
+      systemd-boot.enable = true;
       grub = {
-        enable = true;
+        enable = false;
         devices = ["nodev"];
         efiSupport = true;
         useOSProber = true;
@@ -24,16 +24,16 @@
       timeout = 5;
     };
   };
-
+  
   networking = {
     hostName = "scythe";
     networkmanager.enable = true;
   };
 
-  zramSwap = {
-    enable = true;
-    algorithm = "zstd";
-  };
+#  zramSwap = {
+#    enable = true;
+#    algorithm = "zstd";
+#  };
 
   services = {
     blueman.enable = true;
@@ -64,8 +64,19 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true; 
 
-  fonts.fontDir.enable = true;
-  
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
+      font-awesome
+      noto-fonts
+      noto-fonts-emoji-blob-bin
+      noto-fonts-cjk-sans
+    ];
+  };
+
+
   systemd.sleep.extraConfig = ''
     AllowSuspend=yes
     AllowHibernation=no
