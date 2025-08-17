@@ -30,10 +30,10 @@
     networkmanager.enable = true;
   };
 
-#  zramSwap = {
-#    enable = true;
-#    algorithm = "zstd";
-#  };
+ zramSwap = {
+   enable = true;
+   algorithm = "zstd";
+ };
 
   services = {
     blueman.enable = true;
@@ -41,12 +41,10 @@
     libinput = {
       enable = true;
       touchpad = {
-      naturalScrolling = true;
-      tapping = true;
+        naturalScrolling = true;
+        tapping = true;
       };
     };
-
-   # xserver.inputDriver = "libinput";
 
     pulseaudio.enable = false;
     pipewire = {
