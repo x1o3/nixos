@@ -10,10 +10,8 @@ environment.systemPackages = with pkgs; [
     tshark
     aircrack-ng
     metasploit
-    hydra
     john
     ettercap
-    # samba
     responder
     rustscan
     enum4linux
@@ -24,6 +22,8 @@ environment.systemPackages = with pkgs; [
     gobuster
     nikto
     hashcat
+    samba
     bloodhound
+    thc-hydra
   ];
 }
