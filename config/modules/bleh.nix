@@ -54,8 +54,9 @@
       pulse.enable = true;
     };
 
+    displayManager.defaultSession = "hyprland";
+
     xserver = {
-      displayManager.defaultSession = "hyprland";
       videoDrivers = ["modesetting"];
       enable = true;
     };
@@ -68,10 +69,6 @@
     graphics = {
       enable = true;
       enable32Bit = true;
-    };
-
-    opengl = {
-      enable = true; 
     };
   };
 
