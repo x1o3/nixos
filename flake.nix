@@ -29,9 +29,6 @@
             ];
           }
         ];
-        specialArgs = {
-          zen = zen-browser.packages.${system}.specific;
-        }; 
       };
     };
 }
