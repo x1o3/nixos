@@ -36,6 +36,7 @@ environment.systemPackages = with pkgs; [
     pamixer
     pavucontrol
     pipewire
+    bibata-cursors
     font-awesome
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
