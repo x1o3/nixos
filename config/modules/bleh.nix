@@ -73,11 +73,6 @@
       };
       videoDrivers = ["modesetting" "nvidia"];
       enable = true;
-      prime = {
-        offload.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
       xkb = {
         layout = "us";
         variant = "";
@@ -94,13 +89,15 @@
       open = false; # Stick to proprietary
       nvidiaPersistenced = true;
       package = pkgs.linuxPackages_6_12.nvidiaPackages.latest;
-    };
-    opengl = {
-      enable = true;
-      driSupport32Bit = true;
+      prime = {
+        offload.enable = true;
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
     };
     graphics = {
       enable = true;
+      driSupport32Bit = true;
       enable32Bit = true;
     };
   };
