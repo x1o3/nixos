@@ -54,13 +54,28 @@
       pulse.enable = true;
     };
 
-    xserver.displayManager.defaultSession = "hyprland";
-    xserver.videoDrivers = ["modesetting"];
-    xserver.enable = true;
+    xserver = {
+      displayManager.defaultSession = "hyprland";
+      videoDrivers = ["modesetting"];
+      enable = true;
+    };
   };
 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true; 
+  hardware = {
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = true;
+
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  };
 
   fonts = {
     fontDir.enable = true;
