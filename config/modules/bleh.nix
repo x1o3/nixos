@@ -8,7 +8,7 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
-
+    kernelModules = ["acer_wmi" "facer"];
     loader = {
       efi = {
         canTouchEfiVariables = true;

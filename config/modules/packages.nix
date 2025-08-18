@@ -12,6 +12,7 @@ environment.systemPackages = with pkgs; [
     ghostty
     fish
     neovim
+    vimPlugins.LazyVim
     neofetch
     fastfetch
     kitty
@@ -21,6 +22,7 @@ environment.systemPackages = with pkgs; [
     hyprpaper
     rustup
     gcc
+    bmake
     rsync 
     virt-manager 
     virt-viewer 
