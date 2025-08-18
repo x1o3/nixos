@@ -55,7 +55,7 @@
     };
 
     xserver.displayManager.defaultSession = "hyprland";
-
+    xserver.videoDrivers = ["modesetting"];
     xserver.enable = true;
   };
 

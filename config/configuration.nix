@@ -8,5 +8,6 @@
       ./modules/x1o3.nix
       ./modules/bleh.nix
       ./modules/tools.nix
+      ./modules/gdrivers.nix
     ];
 }
