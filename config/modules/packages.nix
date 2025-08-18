@@ -64,6 +64,5 @@ environment.systemPackages = with pkgs; [
     zip
     p7zip
     zig
-    inputs.zen-browser.packages."$(system)".default
   ];
 }
