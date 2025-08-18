@@ -62,7 +62,8 @@
       pulse.enable = true;
     };
 
-    displayManager.defaultSession = "hyprland";
+    # displayManager.defaultSession = "hyprland";
+    displayManager.enable = false;
 
     xserver = {
       videoDrivers = ["modesetting"];
