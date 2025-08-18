@@ -4,7 +4,7 @@
   home.username = "x1o3";
   home.homeDirectory = "/home/x1o3";
   home.packages = with pkgs; [
-    inputs.zen-browser.packages."${system}".specific
+    inputs.zen-browser.packages."${system}"
   ];
   home.stateVersion = "25.05"; 
   programs.home-manager.enable = true;
