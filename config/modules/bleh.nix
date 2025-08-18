@@ -40,7 +40,7 @@
 
   environment.variables = {
     XCURSOR_THEME = "Bibata-Modern-Classic";
-    XCURSOR_SIZE = "24";  # optional
+    XCURSOR_SIZE = "24"; 
   };
 
   services = {
@@ -81,7 +81,7 @@
     graphics = {
       enable = true;
       enable32Bit = true;
-    };`
+    };
   };
 
   fonts = {
