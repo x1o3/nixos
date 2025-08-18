@@ -63,9 +63,10 @@
     };
 
     # displayManager.defaultSession = "hyprland";
-    displayManager.enable = false;
-
+    displayManager.enable = lib.mkForce false;
+    
     xserver = {
+      displayManager.lightdm.enable = false;
       videoDrivers = ["modesetting"];
       enable = true;
       xkb = {
