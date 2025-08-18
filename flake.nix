@@ -13,6 +13,10 @@
   outputs = { nixpkgs, zen-browser, home-manager, ... } @ inputs:
   let
     system = "x86_64-linux";
+    username = "x1o3";
+    dir = "/home/$(username)";
+    stateVersion = "25.05";
+    pkgs = nixpkgs.legacyPackages.$(system);
   in {
       nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -23,7 +27,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "HMBackup";
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux"; };
+            home-manager.extraSpecialArgs = { inherit inputs system pkgs username dir stateVersion; };
             home-manager.users.x1o3.imports = [
               ./config/home.nix
             ];
