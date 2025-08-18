@@ -86,7 +86,7 @@
     nvidia = {
       modesetting.enable = true;
       powerManagement.enable = true;
-      open = false; # Stick to proprietary
+      open = false;
       nvidiaPersistenced = true;
       package = pkgs.linuxPackages_6_12.nvidiaPackages.latest;
       prime = {
