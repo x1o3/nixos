@@ -5,6 +5,7 @@
    fsType = "ntfs3";
    options = [ "defaults" ];
   };
+
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
@@ -13,7 +14,9 @@
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
       };
+
       systemd-boot.enable = true;
+
       grub = {
         enable = false;
         devices = ["nodev"];
@@ -30,10 +33,15 @@
     networkmanager.enable = true;
   };
 
- zramSwap = {
+  zramSwap = {
    enable = true;
    algorithm = "zstd";
- };
+  };
+
+  environment.variables = {
+    XCURSOR_THEME = "Bibata-Modern-Classic";
+    XCURSOR_SIZE = "24";  # optional
+  };
 
   services = {
     blueman.enable = true;
@@ -59,6 +67,10 @@
     xserver = {
       videoDrivers = ["modesetting"];
       enable = true;
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
   };
 
@@ -69,7 +81,7 @@
     graphics = {
       enable = true;
       enable32Bit = true;
-    };
+    };`
   };
 
   fonts = {
@@ -105,11 +117,6 @@
     LC_PAPER = "en_IN";
     LC_TELEPHONE = "en_IN";
     LC_TIME = "en_IN";
-  };
-
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   programs.fish.enable = true;
