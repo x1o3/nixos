@@ -1,6 +1,7 @@
 { pkgs, ...}: {
 
 environment.systemPackages = with pkgs; [
+    cloudflare-warp
     libinput
     ntfs3g
     hyprland

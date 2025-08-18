@@ -5,6 +5,7 @@
     extraPackages = with pkgs; [
       vpl-gpu-rt
       vaapiIntel
+      mesa
       intel-media-driver
     ];
   };
