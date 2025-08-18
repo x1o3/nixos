@@ -16,7 +16,7 @@
     username = "x1o3";
     dir = "/home/$(username)";
     stateVersion = "25.05";
-    pkgs = nixpkgs.legacyPackages.$(system);
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
       nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
