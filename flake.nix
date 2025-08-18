@@ -23,15 +23,15 @@
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "HMBackup";
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux"; };
             home-manager.users.x1o3.imports = [
               ./config/home.nix
             ];
-            home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux"; };
           }
-          specialArgs = {
-            zen = zen-browser.packages.${system}.specific;
-          };
-        ]; 
+        ];
+        specialArgs = {
+          zen = zen-browser.packages.${system}.specific;
+        }; 
       };
     };
 }
