@@ -7,8 +7,13 @@
   };
 
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-    kernelModules = ["acer_wmi" "facer"];
+    kernelPackages = pkgs.linuxPackages_6_12;
+    kernelParams = [
+      "nvidia_drm.modeset=1"
+      "nvidia_drm.fbdev=1"
+      "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+      "nvidia.NVreg_OpenRmEnableUnsupportedGpus=1"
+    ];
     loader = {
       efi = {
         canTouchEfiVariables = true;
@@ -62,15 +67,17 @@
       pulse.enable = true;
     };
 
-
-    # displayManager.enable = lib.mkForce false;
-    
     xserver = {
       displayManager = {
         lightdm.enable = false;
       };
-      videoDrivers = ["modesetting"];
+      videoDrivers = ["modesetting" "nvidia"];
       enable = true;
+      prime = {
+        offload.enable = true;
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
       xkb = {
         layout = "us";
         variant = "";
@@ -81,7 +88,17 @@
   hardware = {
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
-
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = true;
+      open = false; # Stick to proprietary
+      nvidiaPersistenced = true;
+      package = pkgs.linuxPackages_6_12.nvidiaPackages.latest;
+    };
+    opengl = {
+      enable = true;
+      driSupport32Bit = true;
+    };
     graphics = {
       enable = true;
       enable32Bit = true;

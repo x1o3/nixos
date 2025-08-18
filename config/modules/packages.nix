@@ -1,6 +1,7 @@
 { pkgs, ...}: {
 
 environment.systemPackages = with pkgs; [
+    nautilus
     cloudflare-warp
     libinput
     ntfs3g
@@ -11,6 +12,7 @@ environment.systemPackages = with pkgs; [
     git
     ghostty
     fish
+    deno
     neovim
     vimPlugins.LazyVim
     neofetch
