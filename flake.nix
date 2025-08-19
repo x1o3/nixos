@@ -10,10 +10,18 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, zen-browser, ... } @ inputs:{
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs:{
+    scripts = {
+      bat_notify = ./dotfiles/.scripts/bat_notify.sh;
+      bat_notify_rule = ./dotfiles/.scripts/bat_notify.rules;
+    };  
     nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = { 
+        inherit inputs;
+        batnotifyrule = self.scripts.bat_notify;
+        batnotifyscript = self.scripts.bat_notify_rule;
+      };
       modules = [
         ./config/configuration.nix
 	    home-manager.nixosModules.home-manager {

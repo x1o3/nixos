@@ -1,0 +1,1 @@
+paru -S exiftool binwalk crunch gnu-netcat nmap wireshark-qt netexec aircrack-ng metasploit hydra john ettercap-gtk smbclient responder rustscan peass-ng enum4linux wifite burpsuite netdiscover gobuster nikto gobuster hashcat netexec --needed
