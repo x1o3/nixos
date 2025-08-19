@@ -48,9 +48,10 @@ environment.systemPackages = with pkgs; [
   tldr
   jq
   # Dev
+  mysql84 
   git
   deno
-  neovim
+  neovim 
   vimPlugins.LazyVim
   rustup
   gcc
