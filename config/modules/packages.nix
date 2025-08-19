@@ -2,7 +2,7 @@
 
 environment.systemPackages = with pkgs; [
   # Media
-  feh
+  imagemagick
   zathura
   nautilus
   # Networking
