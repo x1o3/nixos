@@ -29,8 +29,7 @@ alias push="git push"
 alias init="git init"
 alias save="git config --global credential.helper store"
 alias checkout="git checkout"
-alias ll='exa -al --color=always --group-directories-first | grep -v "\($RECYCLE.BIN\|System Volume Information\)"' # my preferred listing
-alias reflector='sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
+alias ll='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='eza -a --color=always --group-directories-first'  # all files and dirs
 alias ls='eza --color=always --icons --group-directories-first | grep -v "\($RECYCLE.BIN\|System Volume Information\)"'  # long format
 alias lt='eza -aT --color=always --group-directories-first' # tree listing
