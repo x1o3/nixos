@@ -19,6 +19,7 @@ environment.systemPackages = with pkgs; [
   blueman
   acpi
   # UI Tools
+  libnotify
   hyprland
   xdg-desktop-portal-hyprland
   waybar
