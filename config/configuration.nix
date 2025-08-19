@@ -4,10 +4,11 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/packages.nix
       ./modules/x1o3.nix
       ./modules/bleh.nix
-      ./modules/tools.nix
-      ./modules/gdrivers.nix
+      ./modules/services.nix
+      ./modules/pkgs/tools.nix
+      ./modules/pkgs/packages.nix
+      ./modules/pkgs/gdrivers.nix
     ];
 }
