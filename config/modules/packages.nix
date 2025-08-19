@@ -1,70 +1,87 @@
 { pkgs, ...}: {
 
 environment.systemPackages = with pkgs; [
-    feh
-    zathura
-    nautilus
-    cloudflare-warp
-    libinput
-    ntfs3g
-    hyprland
-    xdg-desktop-portal-hyprland
-    waybar
-    rofi
-    git
-    ghostty
-    fish
-    deno
-    neovim
-    vimPlugins.LazyVim
-    neofetch
-    fastfetch
-    kitty
-    brave	
-    wget
-    mlocate
-    hyprpaper
-    rustup
-    gcc
-    bmake
-    rsync 
-    virt-manager 
-    virt-viewer 
-    virtualbox 
-    colloid-gtk-theme 
-    papirus-icon-theme 
-    starship 
-    pipes-rs 
-    tmux 
-    eza
-    wl-clipboard
-    hyprshot
-    pamixer
-    pavucontrol
-    pipewire
-    bibata-cursors
-    font-awesome
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
-    noto-fonts-cjk-sans
-    noto-fonts-emoji-blob-bin
-    noto-fonts
-    wlogout
-    blueman
-    dunst
-    discord
-    obsidian
-    spotify
-    brightnessctl
-    hyprlock
-    docker 
-    openvpn
-    zed-editor
-    python3Full
-    python313Packages.pip
-    unzip
-    zip
-    p7zip
-    zig
+  # Media
+  feh
+  zathura
+  nautilus
+  # Networking
+  brave
+  cloudflare-warp
+  openvpn
+  wget
+  syncthing
+  firewalld
+  mlocate
+  # I/O
+  libinput
+  ntfs3g
+  blueman
+  # UI Tools
+  hyprland
+  xdg-desktop-portal-hyprland
+  waybar
+  rofi
+  hyprpaper
+  hyprshot
+  wlogout
+  hyprlock
+  dunst
+  brightnessctl
+  pamixer
+  pavucontrol
+  pipewire
+  wl-clipboard
+  # Terminal
+  fish
+  kitty
+  tmux
+  neofetch
+  fastfetch
+  eza
+  starship
+  pipes-rs
+  ghostty
+  bat
+  htop
+  tldr
+  jq
+  # Dev
+  git
+  deno
+  neovim
+  vimPlugins.LazyVim
+  rustup
+  gcc
+  bmake
+  python3Full
+  python313Packages.pip
+  zig
+  obsidian
+  zed-editor
+  # Virtualization
+  virt-manager
+  virt-viewer
+  virtualbox
+  docker
+  docker-compose
+  # Themes & Fonts
+  colloid-gtk-theme
+  papirus-icon-theme
+  bibata-cursors
+  font-awesome
+  nerd-fonts.fira-code
+  nerd-fonts.jetbrains-mono
+  noto-fonts-cjk-sans
+  noto-fonts-emoji-blob-bin
+  noto-fonts
+  # Archives
+  unzip
+  zip
+  p7zip
+  # Add-ons
+  discord
+  spotify
+  rsync
   ];
 }
