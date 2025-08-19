@@ -59,6 +59,8 @@ environment.systemPackages = with pkgs; [
   python313Packages.pip
   zig
   obsidian
+  ruby
+  rubyPackages.racc
   zed-editor
   # Virtualization
   virt-manager
