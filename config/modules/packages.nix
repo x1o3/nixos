@@ -1,6 +1,8 @@
 { pkgs, ...}: {
 
 environment.systemPackages = with pkgs; [
+    feh
+    zathura
     nautilus
     cloudflare-warp
     libinput
