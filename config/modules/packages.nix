@@ -32,6 +32,7 @@ environment.systemPackages = with pkgs; [
   pavucontrol
   pipewire
   wl-clipboard
+  xclip
   # Terminal
   fish
   kitty
