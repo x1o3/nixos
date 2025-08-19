@@ -20,7 +20,7 @@
           home-manager.backupFileExtension = "HMBackup";
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux"; };
-          home-manager.users.user.imports = [ ./config/home.nix ];
+          home-manager.users.x1o3.imports = [ ./config/home.nix ];
         }
       ];
     };
