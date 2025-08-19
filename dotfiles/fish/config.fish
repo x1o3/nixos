@@ -13,8 +13,8 @@ set fish_color_error brred #'#ff5555'
 set fish_color_quote bryellow
 # set fish_color_keyword "#5E9DA1"
 fish_vi_key_bindings
-alias killme="sudo nixos-rebuild --flake /home/x1o3/nixos#nyx switch"
-alias levelup="sudo nixos-rebuild --flake /home/x1o3/nixos#nyx switch --upgrade-all"
+alias killme="sudo nixos-rebuild --flake $HOME/nixos#nyx switch"
+alias levelup="sudo nixos-rebuild --flake $HOME/nixos#nyx switch --upgrade-all"
 alias fuckmess="sudo nix-collect-garbage -d"
 alias nomorempd="sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system"
 alias clone="git clone"
