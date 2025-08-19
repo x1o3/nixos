@@ -1,6 +1,0 @@
-ACTION=="change", SUBSYSTEM=="power_supply", ATTR{status}=="Charging", RUN+="/etc/bat_notify.sh"
-ACTION=="change", SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", RUN+="/etc/bat_notify.sh"
-ACTION=="change", SUBSYSTEM=="power_supply", ATTR{capacity}=="20", RUN+="/etc/bat_notify.sh"
-ACTION=="change", SUBSYSTEM=="power_supply", ATTR{capacity}=="10", RUN+="/etc/bat_notify.sh"
-ACTION=="change", SUBSYSTEM=="power_supply", ATTR{capacity}=="5", RUN+="/etc/bat_notify.sh"
-ACTION=="change", SUBSYSTEM=="power_supply", ATTR{capacity}=="80", RUN+="/etc/bat_notify.sh"
