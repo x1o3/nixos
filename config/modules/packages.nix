@@ -17,6 +17,7 @@ environment.systemPackages = with pkgs; [
   libinput
   ntfs3g
   blueman
+  acpi
   # UI Tools
   hyprland
   xdg-desktop-portal-hyprland
