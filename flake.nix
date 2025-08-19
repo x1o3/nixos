@@ -19,12 +19,13 @@
       system = "x86_64-linux";
       specialArgs = { 
         inherit inputs;
-        batnotifyrule = self.scripts.bat_notify;
-        batnotifyscript = self.scripts.bat_notify_rule;
+        batnotifyrule = self.scripts.bat_notify_rule;
+        batnotifyscript = self.scripts.bat_notify;
       };
       modules = [
         ./config/configuration.nix
-	    home-manager.nixosModules.home-manager {
+	    ./config/modules/services.nix
+        home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.backupFileExtension = "HMBackup";
           home-manager.useUserPackages = true;
