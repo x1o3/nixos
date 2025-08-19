@@ -1,7 +1,8 @@
-## For Easy Replication  
-Run the script `nixsyms.sh` present in `dotfiles/.scripts/`    
-Make sure to adjust the following :    
-- `$HOME` in `config/home.nix`   
-- `$USER` in `configuration.nix`,`home.nix`,`flake.nix`,`x1o3.nix` (also rename)  
-
+## For Easy Replication   
+   
+Copy your default generated `hardware-configuration.nix` to `nixos/config`    
+Run the script `nixsyms.sh` present in `dotfiles/.scripts/`       
+Make sure to adjust the following :            
+- `$USER` in `home.nix`,`flake.nix`      
+- `$HOME` in `config/home.nix`    
 ENJOY ;)
