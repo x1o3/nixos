@@ -1,4 +1,4 @@
-#!/run/current-system/sw/bin/bash
+#!/usr/bin/env sh
 
 cd $HOME/.config || { echo "Failed to cd to ~/.config"; exit 1; }
 

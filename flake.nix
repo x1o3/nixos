@@ -12,10 +12,7 @@
   
   outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs: {
     nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      USER = "x1o3";
       specialArgs = { inherit inputs; };
-
       modules = [
         ./config/configuration.nix
         home-manager.nixosModules.home-manager {
@@ -23,7 +20,7 @@
           home-manager.backupFileExtension = "HMBackup";
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux"; };
-          home-manager.users.${USER}.imports = [ ./config/home.nix ];
+          home-manager.users.user.imports = [ ./config/home.nix ];
         }
       ];
     };
