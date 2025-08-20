@@ -1,2 +1,0 @@
-
-"/home/${builtins.getEnv "USER"}"
