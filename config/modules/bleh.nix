@@ -71,7 +71,19 @@
         variant = "";
       };
     };
-  };
+  
+    tlp = {
+      enable = true;
+      settings = {
+        CPU_MIN_PERF_ON_AC = 0;
+        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 20;
+        START_CHARGE_THRESH_BAT0 = 20; 
+        STOP_CHARGE_THRESH_BAT0 = 80;
+      };
+    };
+  }
 
   hardware = {
     bluetooth.enable = true;
