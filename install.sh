@@ -24,6 +24,6 @@ echo "Replacing variables in ./flake.nix"
 sed -i "s|home-manager.users\.[^.]*\.imports = \[ ./config/home.nix \];|home-manager.users.$user.imports = [ ./config/home.nix ];|g" "$dots/flake.nix"
 
 echo "Building nixos "
-sudo nixos-rebuild switch --flake "$dots#nyx" switch 
+sudo nixos-rebuild switch --flake "$dots#nyx" 
 
 echo "Installation complete! ;)"

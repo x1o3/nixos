@@ -61,18 +61,6 @@ window#waybar {
     padding: 4px 6px;
 }
 
-#battery.charging {
-  background: @green;
-}
-
-#battery.warning:not(.charging) {
-  background: @peach;
-}
-
-#battery.critical:not(.charging) {
-  background: @red;
-}
-
 #memory {
     color: lightpink;
     padding: 4px 6px;
