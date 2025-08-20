@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./modules/user.nix
       ./modules/bleh.nix
+      ./modules/mount.nix
       ./modules/pkgs/tools.nix
       ./modules/pkgs/packages.nix
       ./modules/pkgs/gdrivers.nix
