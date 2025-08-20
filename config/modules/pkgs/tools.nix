@@ -2,6 +2,8 @@
 
 environment.systemPackages = with pkgs; [
     exiftool
+    hexedit
+    unixtools.xxd
     binwalk
     crunch
     netcat-gnu
