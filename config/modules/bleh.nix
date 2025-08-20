@@ -83,7 +83,7 @@
         STOP_CHARGE_THRESH_BAT0 = 80;
       };
     };
-  }
+  };
 
   hardware = {
     bluetooth.enable = true;
