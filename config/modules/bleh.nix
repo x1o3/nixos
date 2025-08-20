@@ -14,16 +14,15 @@
         efiSysMountPoint = "/boot";
       };
 
-      systemd-boot.enable = true;
+      # systemd-boot.enable = true;
 
       grub = {
-        enable = false;
+        enable = true;
         devices = ["nodev"];
         efiSupport = true;
         useOSProber = true;
-        configurationLimit = 5;
+        configurationLimit = 3;
       };
-      timeout = 5;
     };
   };
   
