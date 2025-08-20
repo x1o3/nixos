@@ -10,11 +10,17 @@ sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 # echo "Adding powerManagement.cpuFreqGovernor = 'performance';"
 # sudo sed -i '/imports = \[/a powerManagement.cpuFreqGovernor = "performance";' "$dots/config/hardware-configuration.nix"
 
-echo "Building symlinks for dotfiles"
-sh "$dots/dotfiles/.scripts/nixsyms.sh"
-
 user="$(whoami)"
 home="$(eval echo ~$user)"
+
+echo "Sourcing env.fish for fish" 
+mkdir "$home/.cargo"
+cp "$dots/dotfiles/env.fish" "$home/.cargo/"
+
+echo "Symlinking all configs"
+mkdir "$home/.config"
+echo "Building symlinks for dotfiles"
+sh "$dots/dotfiles/.scripts/nixsyms.sh"
 
 echo "Replacing variables in ./config/home.nix"
 sed -i "s|home\.username = \".*\";|home.username = \"$user\";|g" "$dots/config/home.nix"

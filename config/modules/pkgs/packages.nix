@@ -37,7 +37,6 @@ environment.systemPackages = with pkgs; [
   xclip
   # Terminal
   fish
-  kitty
   tmux
   neofetch
   fastfetch
