@@ -10,9 +10,8 @@ sed -i '/\.\/modules\/mount\.nix/s/^/#/' "$dots/config/configuration.nix"
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 
-### it doesn't work as of now , will fix later :(
-# echo "Adding powerManagement.cpuFreqGovernor = 'performance';"
-# sudo sed -i '/imports = \[/a powerManagement.cpuFreqGovernor = "performance";' "$dots/config/hardware-configuration.nix"
+echo "Adding powerManagement.cpuFreqGovernor = 'performance';"
+sed -i '/hardware\.cpu\.intel\.updateMicrocode = lib\.mkDefault config\.hardware\.enableRedistributableFirmware;/a\  powerManagement.cpuFreqGovernor = "performance";' test.nix
 
 user="$(whoami)"
 home="$(eval echo ~$user)"
