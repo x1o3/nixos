@@ -5,13 +5,15 @@ dots="$(pwd)"
 
 echo "Commenting additional mountpoints from configuration.nix"
 sed -i '/\.\/modules\/mount\.nix/s/^/#/' "$dots/config/configuration.nix"
-
   
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 
 echo "Adding powerManagement.cpuFreqGovernor = 'performance';"
 sed -i '/hardware\.cpu\.intel\.updateMicrocode = lib\.mkDefault config\.hardware\.enableRedistributableFirmware;/a\  powerManagement.cpuFreqGovernor = "performance";' test.nix
+
+echo "removing xboot for grub to rewrite"
+sudo rm /boot/EFI/BOOT/BOOTX64.EFI
 
 user="$(whoami)"
 home="$(eval echo ~$user)"
