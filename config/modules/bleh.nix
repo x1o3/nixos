@@ -117,6 +117,20 @@
     ];
   };
 
+  virtualisation = {
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
+    virtualbox = {
+      host = { 
+        enable = true;
+        enableExtensionPack = true;
+      };
+      guest = { 
+        enable = true;
+        dragAndDrop = true;
+      };
+    };
+  };
 
   systemd.sleep.extraConfig = ''
     AllowSuspend=yes

@@ -68,6 +68,8 @@ environment.systemPackages = with pkgs; [
   virt-manager
   virt-viewer
   virtualbox
+  spice-gtk
+  # qemu_full
   docker
   docker-compose
   # Themes & Fonts
