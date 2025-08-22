@@ -4,7 +4,7 @@
 dots="$(pwd)"
 
 echo "Commenting additional mountpoints from configuration.nix"
-sed -i '/\.\/modules\/mount\.nix/s/^/#/' "$dots/config/configuration.nix"
+sed -i '/\.\/modules\/devices\.nix/s/^/#/' "$dots/config/configuration.nix"
   
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"

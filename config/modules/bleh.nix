@@ -24,7 +24,7 @@
       timeout = 5;
     };
   };
-  
+
   networking = {
     hostName = "scythe";
     networkmanager.enable = true;
@@ -82,6 +82,11 @@
         STOP_CHARGE_THRESH_BAT0 = 80;
       };
     };
+  
+    upower = {
+      enable = true;
+      criticalPowerAction = "Hibernate";
+    };
   };
 
   hardware = {
@@ -132,12 +137,13 @@
     };
   };
 
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=yes
-    AllowHibernation=no
-    AllowHybridSleep=yes
-    AllowSuspendThenHibernate=no
-  '';
+  systemd = {
+    sleep.extraConfig =
+    ''AllowSuspend=yes
+      AllowHibernation=yes
+      AllowHybridSleep=yes
+      AllowSuspendThenHibernate=no''; 
+  };
 
   time.timeZone = "Asia/Kolkata";
   time.hardwareClockInLocalTime = true;
