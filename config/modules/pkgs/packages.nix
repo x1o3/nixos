@@ -64,6 +64,7 @@ environment.systemPackages = with pkgs; [
   ruby
   rubyPackages.racc
   zed-editor
+  vscode
   # Virtualization
   virt-manager
   virt-viewer
