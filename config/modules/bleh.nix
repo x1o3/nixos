@@ -145,6 +145,8 @@
       AllowSuspendThenHibernate=no''; 
   };
 
+  users.groups.mlocate = {};
+
   time.timeZone = "Asia/Kolkata";
   time.hardwareClockInLocalTime = true;
   i18n.defaultLocale = "en_IN";
