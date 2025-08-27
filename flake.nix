@@ -3,14 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... } @ inputs: {
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
     nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
