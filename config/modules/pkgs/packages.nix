@@ -98,5 +98,6 @@ environment.systemPackages = with pkgs; [
   discord
   spotify
   rsync
+  megasync
   ];
 }
