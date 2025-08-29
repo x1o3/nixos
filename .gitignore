@@ -1,1 +1,2 @@
 ./dotfiles/nvim/lazy-lock.json
+./config/modules/devices.nix

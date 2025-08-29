@@ -16,5 +16,10 @@
    fsType = "ntfs3";
    options = [ "defaults" ];
   };  
-
+  
+  fileSystems."/d" = {
+   device = "/dev/disk/by-uuid/AAA4681CA467E971";
+   fsType = "ntfs3";
+   options = ["defaults"];
+  };
 }
