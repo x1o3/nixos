@@ -87,6 +87,8 @@
       enable = true;
       criticalPowerAction = "Hibernate";
     };
+
+    cloudflare-warp.enable = true;
   };
 
   hardware = {

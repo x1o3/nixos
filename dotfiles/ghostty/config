@@ -33,6 +33,7 @@ font-family = JetBrainsMono Nerd Font
 # # part of the value. For example, this will have a value of "#123abc":
 background = #000000
 background-opacity = 0.7
+confirm-close-surface = false
 # # Empty values are used to reset config keys to default.
 # key =
 #
