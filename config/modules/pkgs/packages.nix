@@ -48,6 +48,7 @@ environment.systemPackages = with pkgs; [
   htop
   tldr
   jq
+  repgrep
   # Dev
   mysql84 
   git
@@ -87,6 +88,12 @@ environment.systemPackages = with pkgs; [
   unzip
   zip
   p7zip
+  # LSP Servers
+  python313Packages.python-lsp-server
+  rust-analyzer
+  lua-language-server
+  zls
+  nil
   # Add-ons
   discord
   spotify
