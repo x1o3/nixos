@@ -1,5 +1,7 @@
 require('kanagawa').setup({
 
+    transparent = true,
+    theme = "dragon",              -- Load "wave" theme
     commentStyle = { italic = true },
 
     colors = {

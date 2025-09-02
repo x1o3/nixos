@@ -29,5 +29,11 @@ environment.systemPackages = with pkgs; [
     bloodhound
     thc-hydra
     freerdp
+    gns3-server
+    gns3-gui
+    vpcs
+    dynamips
+    ubridge
+    inetutils
   ];
 }

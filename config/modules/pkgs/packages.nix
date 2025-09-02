@@ -41,9 +41,12 @@ environment.systemPackages = with pkgs; [
   neofetch
   fastfetch
   eza
+  fzf 
+  fd
   starship
   pipes-rs
   ghostty
+  kitty
   bat
   htop
   tldr
