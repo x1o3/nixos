@@ -41,7 +41,7 @@ opt.conceallevel = 2
 
 -- Neovide
 if vim.g.neovide then
-	vim.o.guifont = "Fira Code:h12" -- text below applies for VimScript
+	vim.o.guifont = "JetBrainsMono Nerd Font:h12" -- text below applies for VimScript
 	opt.linespace = 0
 	g.neovide_scale_factor = 1.0
 	g.neovide_padding_top = 1
@@ -50,8 +50,8 @@ if vim.g.neovide then
 	g.neovide_padding_left = 1
 	g.neovide_cursor_vfx_particle_density = 10.0
 	g.neovide_cursor_vfx_mode = "railgun"
-	g.neovide_opacity = 1
-	g.neovide_normal_opacity = 1
+	g.neovide_opacity = 0.7
+	g.neovide_normal_opacity = 0.7
 end
 
 vim.api.nvim_set_hl(0, "Comment", { italic = true })

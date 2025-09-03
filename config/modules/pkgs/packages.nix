@@ -28,7 +28,7 @@ environment.systemPackages = with pkgs; [
   hyprshot
   wlogout
   hyprlock
-  dunst
+  mako
   brightnessctl
   pamixer
   pavucontrol
@@ -51,13 +51,13 @@ environment.systemPackages = with pkgs; [
   htop
   tldr
   jq
+  zoxide
   repgrep
   # Dev
   mysql84 
   git
   deno
-  neovim 
-  vimPlugins.LazyVim
+  neovim
   rustup
   gcc
   bmake

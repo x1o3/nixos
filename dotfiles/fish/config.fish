@@ -22,14 +22,9 @@ alias d="cd /d"
 alias clone="git clone"
 alias pull="git pull"
 alias add="git add"
-alias remlist="git remote -v"
 alias commit="git commit"
-alias branch="git branch"
-alias addrem="git remote add"
-alias rmrem="git remote remove"
 alias push="git push"
 alias init="git init"
-alias save="git config --global credential.helper store"
 alias checkout="git checkout"
 alias ll='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='eza -a --color=always --group-directories-first'  # all files and dirs
@@ -38,10 +33,11 @@ alias lt='eza -aT --color=always --group-directories-first' # tree listing
 alias l.='eza -a | grep -E "^\."' 
 alias pipes="pipes-rs -k curved -p 3 -t 0.13 -r 0.6"
 alias ":q"="exit"
-alias nv="nvim"
+alias nvim="nvim"
 alias v="nvim"
 alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
 alias tmux="tmux -u"
 alias wcc="warp-cli connect"
 alias mux="tmux new-session -t shell"
 starship init fish | source
+zoxide init fish | source
