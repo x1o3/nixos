@@ -34,6 +34,9 @@ sed -i "s|home\.homeDirectory = \".*\";|home.homeDirectory = \"$home\";|g" "$dot
 echo "Replacing variables in ./flake.nix"
 sed -i "s|home-manager.users\.[^.]*\.imports = \[ ./config/home.nix \];|home-manager.users.$user.imports = [ ./config/home.nix ];|g" "$dots/flake.nix"
 
+echo "Replacing variables in ./bleh.nix"
+sed -i "s|/home/x1o3/nixos/dotfiles/.scripts/battery.sh|$home/nixos/dotfiles/.scripts/battery.sh|g" "$home/nixos/config/modules/bleh.nix"
+
 echo "Building nixos "
 sudo nixos-rebuild switch --flake "$dots#nyx" 
 

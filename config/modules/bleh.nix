@@ -145,6 +145,16 @@
       AllowHibernation=yes
       AllowHybridSleep=yes
       AllowSuspendThenHibernate=no''; 
+    user.services.battery-notify = {
+      description = "Battery notification service";
+      serviceConfig = {
+        ExecStart = "/home/x1o3/nixos/dotfiles/.scripts/battery.sh";
+        Restart = "always";
+        RestartSec = "10";
+      };
+      wantedBy = [ "default.target" ];
+      enable = true;
+    };    
   };
 
   users.groups.mlocate = {};

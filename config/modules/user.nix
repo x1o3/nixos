@@ -5,4 +5,4 @@
     extraGroups = [ "wheel" "audio" "input" "video" "networkmanager"];
     shell = pkgs.fish;
   };
-  }
+}
