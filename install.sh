@@ -6,6 +6,9 @@ dots="$(pwd)"
 echo "Commenting additional mountpoints from configuration.nix"
 sed -i '/\.\/modules\/devices\.nix/s/^/#/' "$dots/config/configuration.nix"
   
+echo "Commenting additional networking configs from configuration.nix"
+sed -i '/\.\/modules\/networking\.nix/s/^/#/' "$dots/config/configuration.nix"
+
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 
@@ -24,6 +27,7 @@ cp "$dots/dotfiles/env.fish" "$home/.cargo/"
 
 echo "Symlinking all configs"
 mkdir "$home/.config"
+
 echo "Building symlinks for dotfiles"
 sh "$dots/dotfiles/.scripts/nixsyms.sh"
 
