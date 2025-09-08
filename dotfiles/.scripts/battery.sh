@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-BATTERY_PATH=$(find /sys/class/power_supply/ -maxdepth 1 -type d -name "BAT*" | head -n 1)
-CHECK_INTERVAL=60  
+BATTERY_PATH=$(readlink -f /sys/class/power_supply/BAT*)
+CHECK_INTERVAL=1  
 
 notify_low=0
 notify_critical=0
@@ -21,7 +21,6 @@ while true; do
 
   capacity=$(cat "$BATTERY_PATH/capacity")
   status=$(cat "$BATTERY_PATH/status")
-
   capacity=${capacity%.*}
 
   if [[ "$capacity" -le 10 && "$status" == "Discharging" && $notify_critical -eq 0 ]]; then
@@ -66,12 +65,12 @@ while true; do
 if [ "$status" != "$prev_status" ]; then
     case "$status" in
       "Charging")
-        notify-send -u normal "Battery Status:" "Now charging ⚡ (${capacity}%)"
+        notify-send -u normal "Breathing :D (${capacity}%)"
         notify_charging=1
         notify_discharging=0
         ;;
       "Discharging")
-        notify-send -u normal "Battery Status:" "Bleeding :( (${capacity}%)"
+        notify-send -u normal "Bleeding :( (${capacity}%)"
         notify_discharging=1
         notify_charging=0
         ;;
