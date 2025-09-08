@@ -2,6 +2,7 @@ if status is-interactive
     source ~/.config/fish/hyprtitty.fish
 end
 set -x EDITOR "nvim"
+set -x SOPS_USE_GPG 1
 set fish_greeting
 set TERM "xterm-256color"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
