@@ -60,10 +60,12 @@ environment.systemPackages = with pkgs; [
   neovim
   rustup
   gcc
+  cmake
   bmake
   python3Full
   python313Packages.pip
   zig
+  go
   obsidian
   ruby
   rubyPackages.racc
@@ -71,10 +73,8 @@ environment.systemPackages = with pkgs; [
   vscode
   # Virtualization
   virt-manager
-  virt-viewer
-  virtualbox
-  spice-gtk
-  # qemu_full
+  qemu_kvm 
+  libvirt
   docker
   docker-compose
   # Themes & Fonts
