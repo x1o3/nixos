@@ -8,10 +8,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs: {
+
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  let
+    secrets = builtins.fromJSON (builtins.readFile ./config/modules/secrets.json);
+  in {
     nixosConfigurations.nyx = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      system = "x86_64-linux";
+
+      specialArgs = {
+        inherit inputs secrets;
+      };
+
       modules = [
         ./config/configuration.nix
         home-manager.nixosModules.home-manager {
