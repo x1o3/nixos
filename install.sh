@@ -1,14 +1,16 @@
 #!/usr/bin/env sh
 
-### Must run from nixos/ root directory
+### Must run from nixos/ directory
 dots="$(pwd)"
 
 echo "Commenting additional mountpoints from configuration.nix"
-sed -i '/\.\/modules\/devices\.nix/s/^/#/' "$dots/config/configuration.nix"
-  
-echo "Commenting additional networking configs from configuration.nix"
-sed -i '/\.\/modules\/networking\.nix/s/^/#/' "$dots/config/configuration.nix"
+sed -i 's|^\(\s*++ lib.optional (builtins.pathExists ./modules/devices\.nix) ./modules/devices\.nix.*\)$|# \1|' \
+  "$dots/config/configuration.nix"
 
+echo "Commenting additional networking configs from configuration.nix"
+sed -i 's|^\(\s*++ lib.optional (builtins.pathExists ./modules/networking\.nix) ./modules/networking\.nix.*\)$|# \1|' \
+  "$dots/config/configuration.nix"
+  
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 
