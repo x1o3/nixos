@@ -102,5 +102,8 @@ environment.systemPackages = with pkgs; [
   spotify
   rsync
   megasync
+  sops
+  gnupg
+  pinentry-curses
   ];
 }
