@@ -38,6 +38,7 @@ alias v="nvim"
 alias tmsource="tmux source-file ~/.config/tmux/tmux.conf"
 alias tmux="tmux -u"
 alias wcc="warp-cli connect"
+alias w--="warp-cli disconnect"
 alias mux="tmux new-session -t shell"
 starship init fish | source
 zoxide init fish | source
