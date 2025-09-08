@@ -9,5 +9,6 @@
       ./modules/pkgs/tools.nix
       ./modules/pkgs/packages.nix
       ./modules/pkgs/gdrivers.nix
+      ./modules/hc.nix
     ];
 }

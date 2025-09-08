@@ -1,5 +1,5 @@
-{ lib, pkgs, ...}: {
-
+{ config, lib, pkgs, sops, ...}: 
+{
   boot = {
     kernelPackages = pkgs.linuxPackages_6_12;
     kernelParams = [
@@ -13,7 +13,6 @@
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
       };
-
       grub = {
         enable = true;
         devices = ["nodev"];

@@ -1,6 +1,0 @@
-creation_rules:
-  - path_regex: "config/modules/secrets.json"
-    encrypted_regex: ".*"
-    key_groups:
-      - pgp:
-        - "0523A828E9EB8E1A"
