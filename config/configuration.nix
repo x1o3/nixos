@@ -9,7 +9,6 @@
       ./modules/pkgs/tools.nix
       ./modules/pkgs/packages.nix
       ./modules/pkgs/gdrivers.nix
-      ./modules/devices.nix
-      ./modules/networking.nix
+      ./modules/secrets.nix
     ];
 }
