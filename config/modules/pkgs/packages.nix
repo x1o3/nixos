@@ -52,7 +52,7 @@ environment.systemPackages = with pkgs; [
   tldr
   jq
   zoxide
-  repgrep
+  ripgrep
   # Dev
   mysql84 
   git
