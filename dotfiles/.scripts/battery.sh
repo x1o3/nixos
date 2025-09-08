@@ -1,25 +1,30 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-BATTERY_PATH="/sys/class/power_supply/BAT1" ### adjust accordingly fren' ;)
+BATTERY_PATH=$(find /sys/class/power_supply/ -maxdepth 1 -type d -name "BAT*" | head -n 1)
 CHECK_INTERVAL=60  
 
 notify_low=0
 notify_critical=0
 notify_enough=0
 notify_full=0
+notify_charging=0
+notify_discharging=0
+
+prev_status=""
+
+if [[ ! -d "$BATTERY_PATH" ]]; then
+  echo "Battery path $BATTERY_PATH not found."
+  exit 1
+fi
 
 while true; do
-  if [[ ! -d "$BATTERY_PATH" ]]; then
-    echo "Battery path $BATTERY_PATH not found."
-    exit 1
-  fi
 
   capacity=$(cat "$BATTERY_PATH/capacity")
   status=$(cat "$BATTERY_PATH/status")
 
   capacity=${capacity%.*}
 
-  if [[ "$capacity" -le 10 && "$status" == "Leaking hehe" && $notify_critical -eq 0 ]]; then
+  if [[ "$capacity" -le 10 && "$status" == "Discharging" && $notify_critical -eq 0 ]]; then
     notify-send -u critical "I AM DYING!!!!" "FATHERRRRR ${capacity}%!"
     notify_critical=1
     notify_low=0
@@ -27,7 +32,7 @@ while true; do
     notify_full=0
 
   elif [[ "$capacity" -le 25 && "$capacity" -gt 10 && "$status" == "Discharging" && $notify_low -eq 0 ]]; then
-    notify-send -u normal "Oh no :(" "hwelp!!! ${capacity}%"
+    notify-send -u critical "Oh no :(" "hwelp!!! ${capacity}%"
     notify_low=1
     notify_critical=0
     notify_enough=0
@@ -58,5 +63,21 @@ while true; do
     notify_full=0
   fi
 
+if [ "$status" != "$prev_status" ]; then
+    case "$status" in
+      "Charging")
+        notify-send -u normal "Battery Status:" "Now charging ⚡ (${capacity}%)"
+        notify_charging=1
+        notify_discharging=0
+        ;;
+      "Discharging")
+        notify-send -u normal "Battery Status:" "Bleeding :( (${capacity}%)"
+        notify_discharging=1
+        notify_charging=0
+        ;;
+    esac
+    prev_status="$status"
+  fi
+  
   sleep "$CHECK_INTERVAL"
 done
