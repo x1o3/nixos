@@ -28,6 +28,9 @@
   networking = {
     hostName = "scythe";
     networkmanager.enable = true;
+    firewall = {
+      allowedTCPPorts = [8080 4444 443 445 9991];
+    };
   };
 
   zramSwap = {
@@ -125,16 +128,13 @@
   };
 
   virtualisation = {
-    libvirtd.enable = true;
     spiceUSBRedirection.enable = true;
-    virtualbox = {
-      host = { 
-        enable = true;
-        enableExtensionPack = true;
-      };
-      guest = { 
-        enable = false;
-        dragAndDrop = true;
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        ovmf.enable = true;
+        swtpm.enable = true;
       };
     };
   };
@@ -145,19 +145,10 @@
       AllowHibernation=yes
       AllowHybridSleep=yes
       AllowSuspendThenHibernate=no''; 
-    user.services.battery-notify = {
-      description = "Battery notification service";
-      serviceConfig = {
-        ExecStart = "/home/x1o3/nixos/dotfiles/.scripts/battery.sh";
-        Restart = "always";
-        RestartSec = "10";
-      };
-      wantedBy = [ "default.target" ];
-      enable = true;
-    };    
   };
 
   users.groups.mlocate = {};
+  users.groups.libvirt = {};
 
   time.timeZone = "Asia/Kolkata";
   time.hardwareClockInLocalTime = true;
@@ -174,8 +165,11 @@
     LC_TIME = "en_IN";
   };
 
-  programs.fish.enable = true;
-  programs.hyprland.enable = true;
+  programs = {
+    fish.enable = true;
+    hyprland.enable = true;
+    virt-manager.enable = true;
+  };
    
   nixpkgs.config.allowUnfree = true;
   
