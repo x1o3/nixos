@@ -34,6 +34,7 @@ environment.systemPackages = with pkgs; [
     vpcs
     dynamips
     ubridge
+    netexec
     inetutils
   ];
 }
