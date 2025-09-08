@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -9,7 +9,8 @@
       ./modules/pkgs/tools.nix
       ./modules/pkgs/packages.nix
       ./modules/pkgs/gdrivers.nix
-      ./modules/devices.nix
-      ./modules/networking.nix
-    ];
+    ]
+    # local-only configs
+    ++ lib.optional (builtins.pathExists ./modules/devices.nix) ./modules/devices.nix
+    ++ lib.optional (builtins.pathExists ./modules/networking.nix) ./modules/networking.nix;
 }
