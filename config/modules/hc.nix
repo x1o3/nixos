@@ -1,9 +1,9 @@
 {
   boot = {
     kernelParams = [
-      "resume=/dev/disk/by-uuid/7a94bb9b-4034-460c-94b1-204ccd87bce2"
+      "resume=/dev/disk/by-uuid/438d73a0-0725-42e5-af39-013dc37529ad"
     ];
-    resumeDevice = "/dev/disk/by-uuid/7a94bb9b-4034-460c-94b1-204ccd87bce2";
+    resumeDevice = "/dev/disk/by-uuid/438d73a0-0725-42e5-af39-013dc37529ad";
   };
 
   swapDevices = [
