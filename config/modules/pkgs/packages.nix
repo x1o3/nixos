@@ -66,6 +66,7 @@ environment.systemPackages = with pkgs; [
   python313Packages.pip
   zig
   go
+  stdenv.cc.cc.lib
   obsidian
   ruby
   rubyPackages.racc
