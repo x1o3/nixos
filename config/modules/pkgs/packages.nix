@@ -35,6 +35,7 @@ environment.systemPackages = with pkgs; [
   pipewire
   wl-clipboard
   xclip
+  qt6ct
   # Terminal
   fish
   tmux
