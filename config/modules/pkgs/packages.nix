@@ -3,8 +3,8 @@
 environment.systemPackages = with pkgs; [
   # Media
   imagemagick
-  zathura
   nautilus
+  libsForQt5.okular
   # Networking
   brave
   cloudflare-warp
