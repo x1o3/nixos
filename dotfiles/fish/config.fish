@@ -21,6 +21,7 @@ alias nomorempd="sudo nix-env --delete-generations old --profile /nix/var/nix/pr
 alias shell="nix-shell --run fish"
 alias x="cd /x"
 alias d="cd /d"
+alias fix-audio-port="hdajackretask"
 alias clone="git clone"
 alias pull="git pull"
 alias add="git add"
