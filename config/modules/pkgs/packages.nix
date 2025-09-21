@@ -18,6 +18,8 @@ environment.systemPackages = with pkgs; [
   ntfs3g
   blueman
   acpi
+  alsa-utils
+  alsa-tools
   # UI Tools
   libnotify
   hyprland
