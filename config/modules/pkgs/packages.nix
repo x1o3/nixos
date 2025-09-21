@@ -36,6 +36,7 @@ environment.systemPackages = with pkgs; [
   wl-clipboard
   xclip
   qt6ct
+  kdePackages.breeze
   # Terminal
   fish
   tmux
