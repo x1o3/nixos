@@ -38,7 +38,7 @@ while true; do
     notify_full=0
 
   elif [[ "$capacity" -ge 80 && "$capacity" -lt 100 && ("$status" == "Charging" || "$status" == "Full") && $notify_enough -eq 0 ]]; then
-    notify-send -u low "CREAMPIE :D" "${capacity}%"
+    notify-send -u low "M GOOD :D" "${capacity}%"
     notify_enough=1
     notify_low=0
     notify_critical=0
