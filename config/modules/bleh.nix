@@ -27,6 +27,9 @@
   networking = {
     hostName = "scythe";
     networkmanager.enable = true;
+    hosts = {
+    "94.237.59.225" = ["inlanefreight.htb"];
+    };
   };
 
   zramSwap = {

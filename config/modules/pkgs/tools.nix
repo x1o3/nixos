@@ -36,5 +36,8 @@ environment.systemPackages = with pkgs; [
     ubridge
     netexec
     inetutils
+    ### info gathering
+    dig
+    dnsenum ### still run via shell -p dnsenum
   ];
 }
