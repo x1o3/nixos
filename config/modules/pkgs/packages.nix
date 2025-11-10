@@ -2,6 +2,7 @@
 
 environment.systemPackages = with pkgs; [
   # Media
+  vlc
   imagemagick
   nautilus
   libsForQt5.okular
@@ -45,6 +46,7 @@ environment.systemPackages = with pkgs; [
   neofetch
   fastfetch
   eza
+  bc # calculator
   fzf 
   fd
   starship
@@ -69,6 +71,7 @@ environment.systemPackages = with pkgs; [
   python3Full
   python313Packages.pip
   zig
+  jdk
   go
   stdenv.cc.cc.lib
   obsidian
@@ -108,5 +111,11 @@ environment.systemPackages = with pkgs; [
   rsync
   megasync
   gnupg
+  ### Network simulation
+  gns3-server 
+  gns3-gui 
+  vpcs 
+  dynamips 
+  ubridge 
   ];
 }
