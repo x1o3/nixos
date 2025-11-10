@@ -19,6 +19,7 @@ environment.systemPackages = with pkgs; [
     nikto 
     whatweb 
     ### Network traffic & MITM 
+    proxychains
     wireshark 
     tshark 
     ettercap 
@@ -36,6 +37,7 @@ environment.systemPackages = with pkgs; [
     hashcat 
     thc-hydra 
     crunch 
+    hash-identifier
     ### Remote desktop/service clients
     freerdp 
     ### Forensics 

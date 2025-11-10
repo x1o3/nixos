@@ -25,5 +25,16 @@
       allowedTCPPorts = [ 8080 4444 443 445 9991 ];
     };
   };
-}
 
+  programs.proxychains = {
+    enable = true;
+    proxies = {
+      prx1 = {
+        enable = true;
+        type = "http";
+        host = "127.0.0.1";
+        port = 8080;
+      };
+    };
+  };
+}
