@@ -16,6 +16,7 @@ environment.systemPackages = with pkgs; [
     zap
     burpsuite
     gobuster 
+    ffuf
     nikto 
     whatweb 
     ### Network traffic & MITM 

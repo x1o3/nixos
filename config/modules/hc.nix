@@ -14,8 +14,8 @@
 
   fileSystems = {
     "/x" = {
-      device = "/dev/disk/by-uuid/72D1B72F7624D579";
-      fsType = "ntfs3";
+      device = "/dev/disk/by-uuid/E9AF-E819";
+      fsType = "exfat";
       options = [ "defaults" ];
     };
   };

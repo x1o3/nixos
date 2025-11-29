@@ -3,11 +3,13 @@
 environment.systemPackages = with pkgs; [
   # Media
   vlc
+  eog
   imagemagick
   nautilus
   libsForQt5.okular
   # Networking
   brave
+  dhcpcd
   cloudflare-warp
   openvpn
   wget
@@ -15,6 +17,8 @@ environment.systemPackages = with pkgs; [
   firewalld
   mlocate
   # I/O
+  gptfdisk
+  exfatprogs
   libinput
   ntfs3g
   blueman

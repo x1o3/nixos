@@ -28,7 +28,7 @@
     hostName = "scythe";
     networkmanager.enable = true;
     hosts = {
-    "94.237.56.25" = ["inlanefreight.htb" "web1337.inlanefreight.htb" "dev.web1337.inlanefreight.htb"];
+    "94.237.48.51" = ["academy.htb" "archive.academy.htb" "test.academy.htb" "faculty.academy.htb"];
     };
   };
 
