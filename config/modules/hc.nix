@@ -16,7 +16,7 @@
     "/x" = {
       device = "/dev/disk/by-uuid/E9AF-E819";
       fsType = "exfat";
-      options = [ "defaults" ];
+      options = [ "uid=1000" "gid=100" "umask=0002" ];
     };
   };
 
