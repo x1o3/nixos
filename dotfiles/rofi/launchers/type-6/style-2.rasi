@@ -22,10 +22,10 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #282828;
-    background-alt:              #5E9DA1;
+    background:                  #10121F;
+    background-alt:              #D8C0BB;
     foreground:                  #FFFFFF;
-    selected:                    #EE4111;
+    selected:                    #1D2133;
     active:                      #9878FF;
     urgent:                      #7D0075;
   }
@@ -60,7 +60,7 @@ mainbox {
 imagebox {
     padding:                     20px; 
     background-color:            transparent;
-    background-image:            url("~/.config/wallpapers/skull.png", height);
+    background-image:            url("~/.config/wallpapers/basement2k.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }
