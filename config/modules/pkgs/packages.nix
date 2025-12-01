@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{ config, pkgs, ...}: {
 
 environment.systemPackages = with pkgs; [
   # Media
@@ -115,11 +115,5 @@ environment.systemPackages = with pkgs; [
   rsync
   megasync
   gnupg
-  ### Network simulation
-  gns3-server 
-  gns3-gui 
-  vpcs 
-  dynamips 
-  ubridge 
   ];
 }
