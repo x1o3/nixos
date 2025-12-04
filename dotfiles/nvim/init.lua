@@ -141,4 +141,4 @@ require("x1o3.remap")
 require("x1o3.lazy")
 require("colorizer").setup()
 
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("roseprime")
