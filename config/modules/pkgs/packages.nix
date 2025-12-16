@@ -26,6 +26,8 @@ environment.systemPackages = with pkgs; [
   alsa-utils
   alsa-tools
   # UI Tools
+  unoconv # pptx -> pdf
+  poppler-utils # merge pdfs, pdfunite
   libnotify
   hyprland
   xdg-desktop-portal-hyprland

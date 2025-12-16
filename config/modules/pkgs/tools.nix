@@ -42,6 +42,7 @@ environment.systemPackages = with pkgs; [
     ### Remote desktop/service clients
     freerdp 
     ### Forensics 
+    hivex
     file 
     exiftool 
     hexedit 
