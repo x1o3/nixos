@@ -1,0 +1,76 @@
+window#waybar {
+    font-family: "JetBrains Mono NerdFont";
+    background-color: rgba(0,0,0,0);
+    font-size: 1.1rem;
+    border-radius: 1.3rem;
+    padding: 4px;
+}
+
+.modules-left, .modules-center, .modules-right {
+    opacity: 1;
+    background-color : rgba(0,0,0,0.8);   
+    border-radius: 0.5rem;
+    padding: 2px;
+    margin: 2px; 
+}
+
+#workspaces {
+    color : white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 1.1rem;
+    padding: 1.2px;
+}
+
+#workspaces button {
+    color : white; 	
+    font-size: 1.1rem;
+    padding: 0.3rem;
+}
+
+#window {
+    color : white;    	
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0.5rem;
+    padding: 2px 5px;
+}
+
+#temperature {
+    color : lightskyblue;
+    padding: 4px 6px;
+}
+
+#clock {
+    color : white;
+    font-weight: bolder;
+    border-radius: 0.5rem;
+    padding:4px 6px;
+}
+
+#backlight {
+	color : orange;
+    padding: 4px 6px;
+}
+
+#pulseaudio {
+	color : white;
+    padding: 4px 6px;
+}
+
+#battery {
+    color: lightgreen;
+    padding: 4px 6px;
+}
+
+#memory {
+    color: lightpink;
+    padding: 4px 6px;
+}
+
+#network {
+  color: lightgreen;
+}
+
+#custom-power{
+  color: red;
+  padding: 2px 10px;
+}
