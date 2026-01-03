@@ -2,7 +2,7 @@
 
 cd $HOME/.config || { echo "Failed to cd to ~/.config"; exit 1; }
 
-for dir in zed nvim mako fastfetch fish fontconfig ghostty gtk-2.0 gtk-3.0 gtk-4.0 hypr rofi wallpapers waybar starship.toml kdeglobals wlogout; do
+for dir in qt6ct zed nvim mako fastfetch fish fontconfig ghostty gtk-2.0 gtk-3.0 gtk-4.0 hypr rofi wallpapers waybar starship.toml kdeglobals wlogout; do
   echo "Linking $dir"
   rm -rf "$dir"
   ln -s $HOME/nixos/dotfiles/$dir "$dir"
