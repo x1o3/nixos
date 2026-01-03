@@ -5,7 +5,7 @@ environment.systemPackages = with pkgs; [
   vlc
   eog
   imagemagick
-  nautilus
+  kdePackages.dolphin
   kdePackages.okular
   # Networking
   tor-browser

@@ -8,6 +8,12 @@ for dir in zed nvim mako fastfetch fish fontconfig ghostty gtk-2.0 gtk-3.0 gtk-4
   ln -s $HOME/nixos/dotfiles/$dir "$dir"
 done
 
+for file in dolphinrc; do
+    echo "Linking $file"
+    rm -rf "$file"
+    ln -s $HOME/nixos/dotfiles/$file "$file"
+done
+
 mkdir -p "$HOME/.local/share"
 cd $HOME/.local/share || { echo "Failed to cd to ~/.local/share"; exit 1; }
 echo "copying color-schemes"
