@@ -2,6 +2,7 @@
 
 environment.systemPackages = with pkgs; [
   # Media
+  obs-studio
   vlc
   eog
   imagemagick
@@ -53,7 +54,7 @@ environment.systemPackages = with pkgs; [
   neofetch
   fastfetch
   eza
-  bc # calculator
+  speedcrunch
   fzf 
   fd
   starship
@@ -67,6 +68,8 @@ environment.systemPackages = with pkgs; [
   zoxide
   ripgrep
   # Dev
+  nodejs_24
+  foundry
   mysql84 
   git
   deno

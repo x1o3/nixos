@@ -38,7 +38,7 @@
 
   services = {
     blueman.enable = true;
-  
+    timesyncd.enable = true;    
     libinput = {
       enable = true;
       touchpad = {
@@ -132,7 +132,7 @@
   users.groups.libvirt = {};
 
   time.timeZone = "Asia/Kolkata";
-  time.hardwareClockInLocalTime = true;
+  time.hardwareClockInLocalTime = false;
   i18n.defaultLocale = "en_IN";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_IN";

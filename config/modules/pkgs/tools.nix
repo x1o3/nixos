@@ -6,6 +6,7 @@ environment.systemPackages = with pkgs; [
     rustscan 
     nmap 
     ### Network scanning & enumeration 
+    nfs-utils
     netcat-gnu 
     netexec 
     inetutils 
