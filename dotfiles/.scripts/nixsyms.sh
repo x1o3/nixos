@@ -14,6 +14,12 @@ for file in dolphinrc; do
     ln -s $HOME/nixos/dotfiles/$file "$file"
 done
 
+for file in config.yml; do
+    echo "Linking $file"
+    rm -rf "$HOME/.exegol/$file"
+    ln -s $HOME/nixos/dotfiles/$file "$HOME/.exegol/$file"
+done
+
 mkdir -p "$HOME/.local/share"
 cd $HOME/.local/share || { echo "Failed to cd to ~/.local/share"; exit 1; }
 echo "copying color-schemes"

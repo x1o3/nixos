@@ -47,3 +47,6 @@ alias w--="warp-cli disconnect"
 alias mux="tmux new-session -t shell"
 starship init fish | source
 zoxide init fish | source
+
+# Created by `pipx` on 2026-02-12 21:16:28
+set PATH $PATH /home/x1o3/.local/bin

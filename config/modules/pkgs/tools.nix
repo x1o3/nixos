@@ -6,6 +6,10 @@ environment.systemPackages = with pkgs; [
     rustscan 
     nmap 
     ### Network scanning & enumeration 
+    smtp-user-enum
+    braa
+    onesixtyone
+    net-snmp
     nfs-utils
     netcat-gnu 
     netexec 
@@ -14,6 +18,7 @@ environment.systemPackages = with pkgs; [
     dig 
     dnsenum # run via shell -p dnsenum 
     ### Web enumeration 
+    sqlmap
     zap
     burpsuite
     gobuster 
@@ -21,12 +26,13 @@ environment.systemPackages = with pkgs; [
     nikto 
     whatweb 
     ### Network traffic & MITM 
-    proxychains
+    proxychains-ng
     wireshark 
     tshark 
     ettercap 
     responder 
     ### SMB / Active Directory / AD analysis 
+    smbmap
     samba 
     enum4linux 
     enum4linux-ng
@@ -41,7 +47,9 @@ environment.systemPackages = with pkgs; [
     crunch 
     hash-identifier
     ### Remote desktop/service clients
-    freerdp 
+    sqsh
+    evil-winrm
+    rdesktop
     ### Forensics 
     hivex
     file 

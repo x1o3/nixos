@@ -35,7 +35,14 @@ sed -i "s|home-manager.users\.[^.]*\.imports = \[ ./config/home.nix \];|home-man
 echo "Replacing variables in ./bleh.nix"
 sed -i "s|/home/x1o3/nixos/dotfiles/.scripts/battery.sh|$home/nixos/dotfiles/.scripts/battery.sh|g" "$home/nixos/config/modules/bleh.nix"
 
-echo "Building nixos "
+echo "Building nixos"
 sudo nixos-rebuild switch --flake "$dots#nyx" 
+
+echo "Installing exegol"
+mkdir ~/exegol
+pipx ensurepath
+exec $SHELL
+pipx install exegol
+xhost +local:
 
 echo "Installation complete! ;)"

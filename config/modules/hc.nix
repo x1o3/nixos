@@ -14,15 +14,20 @@
 
   fileSystems = {
     "/x" = {
-      device = "/dev/disk/by-uuid/E9AF-E819";
+      device = "/dev/disk/by-uuid/FDAE-FBD9";
       fsType = "exfat";
       options = [ "uid=1000" "gid=100" "umask=0002" ];
+    };
+
+    "/arsenal" = {
+      device = "/dev/disk/by-uuid/68857b58-4338-47d8-b223-6c438ec3a084";
+      fsType = "f2fs";
     };
   };
 
   networking = {
     firewall = {
-      allowedTCPPorts = [ 8080 4444 443 445 9991 ];
+      allowedTCPPorts = [ 8080 4444 443 445 9991 5986 636 ];
     };
   };
 
@@ -30,10 +35,16 @@
     enable = true;
     proxies = {
       prx1 = {
-        enable = true;
+        enable = false;
         type = "http";
         host = "127.0.0.1";
         port = 8080;
+      };
+      ssh = {
+        enable = true;
+        type = "socks4";
+        host = "127.0.0.1";
+        port = 9009;
       };
     };
   };

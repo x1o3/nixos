@@ -110,6 +110,7 @@
   };
 
   virtualisation = {
+    docker.enable = true;
     spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
@@ -148,7 +149,10 @@
 
   programs = {
     fish.enable = true;
-    hyprland.enable = true;
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
     virt-manager.enable = true;
   };
    

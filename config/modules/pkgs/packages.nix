@@ -19,6 +19,7 @@ environment.systemPackages = with pkgs; [
   firewalld
   mlocate
   # I/O
+  gparted
   gptfdisk
   exfatprogs
   libinput
@@ -68,6 +69,7 @@ environment.systemPackages = with pkgs; [
   zoxide
   ripgrep
   # Dev
+  pipx
   nodejs_24
   foundry
   mysql84 
@@ -90,6 +92,7 @@ environment.systemPackages = with pkgs; [
   zed-editor
   vscode
   # Virtualization
+  xhost
   virt-manager
   qemu_kvm 
   libvirt
