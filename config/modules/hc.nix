@@ -14,13 +14,13 @@
 
   fileSystems = {
     "/x" = {
-      device = "/dev/disk/by-uuid/FDAE-FBD9";
+      device = "/dev/disk/by-uuid/ED8F-FBC4";
       fsType = "exfat";
       options = [ "uid=1000" "gid=100" "umask=0002" ];
     };
 
     "/arsenal" = {
-      device = "/dev/disk/by-uuid/68857b58-4338-47d8-b223-6c438ec3a084";
+      device = "/dev/disk/by-uuid/11344f83-6237-44e0-867d-94b1bd668767";
       fsType = "f2fs";
     };
   };

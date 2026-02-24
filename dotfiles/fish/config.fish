@@ -16,14 +16,19 @@ set fish_color_quote bryellow
 fish_vi_key_bindings
 alias killme="sudo nixos-rebuild --flake $HOME/nixos#nyx switch"
 alias levelup="sudo nixos-rebuild --flake $HOME/nixos#nyx switch --upgrade-all --verbose"
+alias offline="sudo nixos-rebuild --flake $HOME/nixos#nyx switch --option substitute false"
 alias fuckmess="sudo nix-collect-garbage -d"
 alias nomorempd="sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system"
+alias htb="exegol start htb" # running exegol container named htb
 alias shell="nix-shell --run fish"
-# alias msfconsole='msfconsole 2> /dev/null'
 alias msf='sudo msfconsole 2> /dev/null -q'
 alias x="cd /x"
+alias a="cd /arsenal"
 alias d="cd /d"
 alias fix-audio-port="hdajackretask"
+alias pptx2pdf="unoconv -f pdf *.pptx 2> /dev/null"
+alias ppt2pdf="unoconv -f pdf *.ppt 2> /dev/null"
+alias concmp4="ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4"
 alias clone="git clone"
 alias pull="git pull"
 alias add="git add"
@@ -47,6 +52,15 @@ alias w--="warp-cli disconnect"
 alias mux="tmux new-session -t shell"
 starship init fish | source
 zoxide init fish | source
+function rm!
+    set -l keep $argv
+    set -l files *
 
+    for f in $files
+        if not contains -- $f $keep
+            rm -- $f
+        end
+    end
+end
 # Created by `pipx` on 2026-02-12 21:16:28
 set PATH $PATH /home/x1o3/.local/bin

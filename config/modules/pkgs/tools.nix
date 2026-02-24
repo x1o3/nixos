@@ -21,6 +21,7 @@ environment.systemPackages = with pkgs; [
     sqlmap
     zap
     burpsuite
+    chromium
     gobuster 
     ffuf
     nikto 

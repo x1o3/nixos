@@ -2,6 +2,7 @@
 
 environment.systemPackages = with pkgs; [
   # Media
+  ffmpeg_7-headless
   obs-studio
   vlc
   eog
@@ -29,6 +30,8 @@ environment.systemPackages = with pkgs; [
   alsa-utils
   alsa-tools
   # UI Tools
+  nms # no more secrets, nms -a
+  gping
   unoconv # pptx -> pdf
   poppler-utils # merge pdfs, pdfunite
   libnotify
@@ -50,6 +53,7 @@ environment.systemPackages = with pkgs; [
   qt6Packages.qt6ct
   kdePackages.breeze
   # Terminal
+  powershell
   fish
   tmux
   neofetch
