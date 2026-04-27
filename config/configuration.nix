@@ -9,5 +9,6 @@
       ./modules/pkgs/tools.nix
       ./modules/pkgs/packages.nix
       ./modules/hc.nix
+      ./modules/wep.nix
     ];
 }

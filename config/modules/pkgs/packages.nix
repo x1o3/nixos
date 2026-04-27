@@ -10,6 +10,12 @@ environment.systemPackages = with pkgs; [
   kdePackages.dolphin
   kdePackages.okular
   # Networking
+  # dhclient
+  # dhcpcd
+  hostapd
+  dnsmasq
+  iw
+  wirelesstools
   tor-browser
   brave
   dhcpcd
@@ -53,6 +59,8 @@ environment.systemPackages = with pkgs; [
   qt6Packages.qt6ct
   kdePackages.breeze
   # Terminal
+  qbittorrent
+  openssl
   powershell
   fish
   tmux
@@ -72,7 +80,9 @@ environment.systemPackages = with pkgs; [
   jq
   zoxide
   ripgrep
+  readline
   # Dev
+  sqlite
   pipx
   nodejs_24
   foundry
@@ -82,6 +92,14 @@ environment.systemPackages = with pkgs; [
   neovim
   rustup
   gcc
+  gnumake
+  libpcap
+  libffi
+  zlib
+  libxml2
+  libxslt
+  libyaml
+  pkg-config
   cmake
   bmake
   python313
@@ -92,10 +110,13 @@ environment.systemPackages = with pkgs; [
   stdenv.cc.cc.lib
   obsidian
   ruby
+  rubocop
+  postgresql
   rubyPackages.racc
   zed-editor
   vscode
   # Virtualization
+  virtiofsd
   xhost
   virt-manager
   qemu_kvm 
@@ -124,6 +145,7 @@ environment.systemPackages = with pkgs; [
   nil
   # Add-ons
   discord
+  vesktop
   spotify
   rsync
   megasync

@@ -14,6 +14,7 @@ set fish_color_error brred #'#ff5555'
 set fish_color_quote bryellow
 # set fish_color_keyword "#5E9DA1"
 fish_vi_key_bindings
+alias msfcp="rm ~/.msf4/modules/exploits/multi/http/grav_admin_direct_install_rce_cve_2025_50286.rb && cp grav_admin_direct_install_rce_cve_2025_50286.rb -t ~/.msf4/modules/exploits/multi/http/"
 alias killme="sudo nixos-rebuild --flake $HOME/nixos#nyx switch"
 alias levelup="sudo nixos-rebuild --flake $HOME/nixos#nyx switch --upgrade-all --verbose"
 alias offline="sudo nixos-rebuild --flake $HOME/nixos#nyx switch --option substitute false"

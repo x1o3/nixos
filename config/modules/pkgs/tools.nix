@@ -47,6 +47,7 @@ environment.systemPackages = with pkgs; [
     crunch 
     hash-identifier
     ### Remote desktop/service clients
+    freerdp
     sqsh
     evil-winrm
     rdesktop

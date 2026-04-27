@@ -110,13 +110,23 @@
   };
 
   virtualisation = {
-    docker.enable = true;
+    docker = {
+      enable = true;
+      daemon.settings = {
+        log-driver = "json-file";
+        log-opts = {
+        max-size = "10m";
+        max-file = "3";
+        };
+      };
+    };
     spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
       qemu = {
         package = pkgs.qemu_kvm;
         swtpm.enable = true;
+        vhostUserPackages = [ pkgs.virtiofsd ];
       };
     };
   };
