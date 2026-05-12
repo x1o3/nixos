@@ -36,10 +36,6 @@ environment.systemPackages = with pkgs; [
   alsa-utils
   alsa-tools
   # UI Tools
-  nms # no more secrets, nms -a
-  gping
-  unoconv # pptx -> pdf
-  poppler-utils # merge pdfs, pdfunite
   libnotify
   hyprland
   xdg-desktop-portal-hyprland
@@ -60,6 +56,10 @@ environment.systemPackages = with pkgs; [
   kdePackages.breeze
   # Terminal
   qbittorrent
+  nms # no more secrets, nms -a
+  gping
+  unoconv # pptx -> pdf
+  poppler-utils # merge pdfs, pdfunite
   openssl
   powershell
   fish
@@ -144,7 +144,7 @@ environment.systemPackages = with pkgs; [
   zls
   nil
   # Add-ons
-  discord
+  whatsapp-electron
   vesktop
   spotify
   rsync

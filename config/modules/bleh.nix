@@ -22,7 +22,7 @@
     hostName = "scythe";
     networkmanager.enable = true;
     hosts = {
-    "94.237.48.51" = ["academy.htb" ];
+    "10.129.244.106" = ["wingdata.htb ftp.wingdata.htb" ];
     };
   };
 

@@ -8,6 +8,5 @@
       ./modules/bleh.nix
       ./modules/pkgs/tools.nix
       ./modules/pkgs/packages.nix
-      ./modules/hc.nix
     ];
 }

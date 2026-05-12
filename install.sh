@@ -3,9 +3,6 @@
 ### Must run from nixos/ directory
 dots="$(pwd)"
 
-echo "Commenting additional mountpoints and networking configs from configuration.nix"
-sed -i '/\.\/modules\/hc\.nix/s/^/#/' "$dots/config/configuration.nix"
-
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 
