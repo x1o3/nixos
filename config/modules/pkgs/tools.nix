@@ -41,6 +41,7 @@ environment.systemPackages = with pkgs; [
     enum4linux 
     enum4linux-ng
     bloodhound 
+    rusthound-ce
     ### Exploitation & post-exploitation frameworks 
     metasploit 
     exploitdb 
