@@ -31,7 +31,11 @@ environment.systemPackages = with pkgs; [
     tshark 
     ettercap 
     responder 
+    tor-browser
+    tor
     ### SMB / Active Directory / AD analysis 
+    certipy
+    python313Packages.bloodyad
     smbmap
     samba 
     enum4linux 
