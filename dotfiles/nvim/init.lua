@@ -141,4 +141,18 @@ require("x1o3.remap")
 require("x1o3.lazy")
 require("colorizer").setup()
 
-vim.cmd.colorscheme("roseprime")
+vim.cmd.colorscheme("kanagawa-dragon")
+local transparent_groups = {
+  "Normal",
+  "NormalNC",
+  "NormalFloat",
+  "SignColumn",
+  "EndOfBuffer",
+  "LineNr",
+  "FoldColumn",
+  "CursorLineNr",
+}
+
+for _, group in ipairs(transparent_groups) do
+  vim.api.nvim_set_hl(0, group, { bg = "NONE" })
+end

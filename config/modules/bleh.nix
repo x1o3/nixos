@@ -18,6 +18,8 @@
     };
   };
 
+  environment.etc.hosts.enable = false;
+  
   networking = {
     hostName = "scythe";
     networkmanager.enable = true;

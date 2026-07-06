@@ -3,6 +3,9 @@
 ### Must run from nixos/ directory
 dots="$(pwd)"
 
+echo "Commenting additional mountpoints and networking configs from configuration.nix"
+sed -i '/\.\/modules\/hc\.nix/s/^/#/' "$dots/config/configuration.nix"
+
 echo "Copying hardware-configuration.nix"
 sudo cp "/etc/nixos/hardware-configuration.nix" -t "$dots/config/"
 
@@ -34,12 +37,5 @@ sed -i "s|/home/x1o3/nixos/dotfiles/.scripts/battery.sh|$home/nixos/dotfiles/.sc
 
 echo "Building nixos"
 sudo nixos-rebuild switch --flake "$dots#nyx" 
-
-echo "Installing exegol"
-mkdir ~/exegol
-pipx ensurepath
-exec $SHELL
-pipx install exegol
-xhost +local:
 
 echo "Installation complete! ;)"

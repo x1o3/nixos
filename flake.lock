@@ -36,23 +36,10 @@
         "type": "github"
       }
     },
-    "private": {
-      "locked": {
-        "lastModified": 1778565578,
-        "narHash": "sha256-Nb7xz/gjXjXu7wTLPP3mVhUsvUNPf37hAwUjGg/hhT8=",
-        "path": "/home/x1o3/pvtconfs",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/x1o3/pvtconfs",
-        "type": "path"
-      }
-    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs",
-        "private": "private"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

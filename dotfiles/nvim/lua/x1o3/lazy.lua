@@ -109,6 +109,7 @@ require("lazy").setup({
     { "neovim/nvim-lspconfig" },
     {
         "saghen/blink.cmp",
+        version = "1.*",
         lazy = false, -- Force it to load immediately
         priority = 1000, -- Make sure it's before LSP
         build = "cargo build --release",

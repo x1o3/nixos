@@ -7,7 +7,7 @@ environment.systemPackages = with pkgs; [
   vlc
   eog
   imagemagick
-  kdePackages.dolphin
+  nautilus
   kdePackages.okular
   # Networking
   # dhclient

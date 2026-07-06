@@ -1,14 +1,25 @@
 {
-  boot = {
-    kernelParams = [
-      "resume=/dev/disk/by-uuid/438d73a0-0725-42e5-af39-013dc37529ad"
-    ];
-    resumeDevice = "/dev/disk/by-uuid/438d73a0-0725-42e5-af39-013dc37529ad";
+  fileSystems = {
+    "/x" = {
+      device = "/dev/disk/by-uuid/e8c53eef-841c-4110-a0ed-5123b4f5a2f2";
+      fsType = "f2fs";
+    };
   };
-
-  swapDevices = [
-    {
-      device = "/dev/nvme1n1p2";
-    }
-  ];
+  programs.proxychains = {
+    enable = true;
+    proxies = {
+      prx1 = {
+        enable = false;
+        type = "http";
+        host = "127.0.0.1";
+        port = 8080;
+      };
+      ssh = {
+        enable = true;
+        type = "socks4";
+        host = "127.0.0.1";
+        port = 9009;
+      };
+    };
+  };
 }
