@@ -23,8 +23,8 @@
   networking = {
     hostName = "scythe";
     networkmanager.enable = true;
-    hosts = {
-    "10.129.244.106" = ["wingdata.htb ftp.wingdata.htb" ];
+    firewall = {
+      allowedTCPPorts = [ 443 445 1337 4441 4443 4444 8080 8443 9991 9999 ];
     };
   };
 
@@ -125,6 +125,7 @@
     spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
+      onBoot = "start";
       qemu = {
         package = pkgs.qemu_kvm;
         swtpm.enable = true;
